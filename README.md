@@ -65,6 +65,6 @@ Phase 3: Pilot deployment for Indian SME supply chain partners.
 🤝 Contact & Collaboration
 Founder: Venkat (Sovereign Visuals)
 
-X (Twitter): Follow @ramana_rol83932
+X (Twitter): 
 
 Built for the AlgoBharat Hack Series 3.0 | Empowering the Indian Agentic Economy.
