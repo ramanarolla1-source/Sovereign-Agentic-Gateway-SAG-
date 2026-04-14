@@ -18,23 +18,24 @@ In the Indian SME sector, autonomous commerce is hindered by security vulnerabil
 * [cite_start]**Memory-Safe Execution (Rust):** Eliminates common vulnerability classes for agent-controlled private keys.
 * [cite_start]**Minimal Attack Surface (Alpine Linux):** Strips away legacy vulnerabilities by utilizing a `musl` libc footprint.
 * [cite_start]**Algorand Native:** Leverages Algorand's sub-second finality for instant, immutable settlement of Agent-to-Agent (A2A) commerce.
-
----
-
-## 🛠️ System Architecture
 ## 🛠️ System Architecture
 
-```mermaid
-graph TD
-    A[AI Agent] -->|Procurement Request| B(Sovereign Agentic Gateway)
-    B --> C{Hardened Rust Environment}
-    C -->|Verified Logic| D[Algorand SDK]
-    D -->|Atomic Settlement| E[Algorand Mainnet/Testnet]
-    
-    subgraph "Trust Anchor Layer"
-    C
-    B
-    end
+```text
+[ AI Agent ] 
+      |
+      | (Procurement Request)
+      v
+[ Sovereign Agentic Gateway ] <--- (Trust Anchor Layer)
+      |
+      | (Hardened Rust/Alpine Environment)
+      v
+[ Algorand SDK ]
+      |
+      | (Atomic Settlement)
+      v
+[ Algorand Mainnet/Testnet ]
+
+
 📦 Core Features
 
 Hardened Verification: Real-time identity and balance verification within a memory-safe environment.
