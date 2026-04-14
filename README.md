@@ -41,6 +41,18 @@ In the Indian SME sector, autonomous commerce is hindered by security vulnerabil
       | (Atomic Settlement)
       v
 [ Algorand Mainnet/Testnet ]
+---
+
+## ⚙️ Technical Architecture Overview
+
+The **Sovereign Agentic Gateway (SAG)** is built on a "Hardened Multi-Tier" stack designed for high-stakes agentic commerce on Algorand:
+
+* **Execution Layer (Rust):** Core logic is implemented in **Rust** to ensure memory safety and zero-cost abstractions, handling sensitive pre-signing validation.
+* **Infrastructure Base (Alpine Linux):** Containerized using **Alpine Linux** (`musl` libc footprint) to minimize the attack surface and remove legacy vulnerabilities.
+* **Settlement Layer (Algorand):** Utilizes **Algorand Smart Contracts** for atomic settlement, leveraging sub-second finality for instant Agent-to-Agent (A2A) transactions.
+* **Security Model:** Hardware-anchored identity ensures AI agents operate within a verifiable "Trust Anchor."
+
+---
 📦 Core Features
 Hardened Verification: Real-time identity and balance verification within a memory-safe environment.
 
