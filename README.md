@@ -22,16 +22,19 @@ In the Indian SME sector, autonomous commerce is hindered by security vulnerabil
 ---
 
 ## 🛠️ System Architecture
+## 🛠️ System Architecture
+
 ```mermaid
 graph TD
     A[AI Agent] -->|Procurement Request| B(Sovereign Agentic Gateway)
     B --> C{Hardened Rust Environment}
     C -->|Verified Logic| D[Algorand SDK]
     D -->|Atomic Settlement| E[Algorand Mainnet/Testnet]
+    
     subgraph "Trust Anchor Layer"
     C
     B
-    ...end
+    end
 📦 Core Features
 
 Hardened Verification: Real-time identity and balance verification within a memory-safe environment.
