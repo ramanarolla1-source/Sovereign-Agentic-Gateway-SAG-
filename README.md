@@ -31,7 +31,7 @@ graph TD
     subgraph "Trust Anchor Layer"
     C
     B
-    end
+    end...
 📦 Core Features
 
 Hardened Verification: Real-time identity and balance verification within a memory-safe environment.
