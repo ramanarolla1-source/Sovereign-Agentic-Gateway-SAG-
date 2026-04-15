@@ -66,6 +66,22 @@ SME-Ready Infrastructure: Designed to align with the DPDP Act, ensuring minimal 
 /hardened-runtime: Rust implementation for the secure execution gateway.
 
 /docs: One-Pager and architectural deep-dives.
+🛠️ Hardened Installation & Setup
+To maintain silicon-level security, the SAG is designed to run in a minimal, memory-safe environment.
+
+1. Configure the Environment
+The gateway requires specific credentials to interface with the Algorand blockchain and the agentic execution layer.
+
+Copy the template:
+cp .env.example .env
+Open .env and provide your Algorand Testnet Mnemonic. This is required for the Rust signer to authorize autonomous commerce.
+
+2. Build the Hardened Container (Alpine Linux)
+We use a minimal Alpine Linux footprint to reduce the attack surface.
+docker-compose up --build
+3. Verify Execution
+Once the container is running, the agent will begin monitoring for incoming "Trade Negotiation" signals. You can verify the health of the gateway via:
+curl http://localhost:8080/health
 
 🗺️ Roadmap
 Phase 1 (Current): Proof of Concept — End-to-end flow of a Rust-hardened agent executing a payment on Algorand Testnet.
